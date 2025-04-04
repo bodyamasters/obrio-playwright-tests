@@ -23,12 +23,12 @@ test.beforeEach(async ({ page }) => {
     await expect(networkStatus).toBeVisible();
   });
  
-  test('connection text displays on the Status of your network block', async ({ page }) => {
+  test('Connected text displays on the Status of your network block', async ({ page }) => {
     // Expect a "Connected" title text 
     await expect(page.getByText('Connected')).toBeVisible({ timeout: 5000 });
   });
   
-  test('connection text displays in green color', async ({ page }) => {
+  test('Connected text displays in green color', async ({ page }) => {
     // Find the Connected block
     const block = page.getByText('Connected');
     await expect(block).toBeVisible({timeout:5000});
@@ -40,7 +40,7 @@ test.beforeEach(async ({ page }) => {
     expect(color).toEqual('rgb(67, 147, 103)', { timeout: 5000 });
   });
   
-  test('connection dot icon displays on the Status of your network block', async ({ page }) => {
+  test('Connection dot icon displays on the Status of your network block', async ({ page }) => {
     // Find dot icon
     const dotIcon = page.getByLabel('Status of your network').locator('span').first();
 
@@ -48,7 +48,7 @@ test.beforeEach(async ({ page }) => {
     await expect(dotIcon).toBeVisible({ timeout: 5000 });
   });
  
-  test('connection dot icon displays in green color', async ({ page }) => {
+  test('Connection dot icon displays in green color', async ({ page }) => {
     // Set a timeout to load the page
     await page.waitForTimeout(6000);
     
@@ -64,7 +64,7 @@ test.beforeEach(async ({ page }) => {
     expect(color).toEqual('rgb(96, 210, 148)');
   });
  
-  test('hint block displays after hover over Status of your network block', async ({ page }) => {
+  test('Hint block displays after hover over Status of your network block', async ({ page }) => {
     // Set a timeout to load the page
     await page.waitForTimeout(6000);
     
@@ -127,7 +127,7 @@ test.describe('Status of your profiles on block', () => {
     expect(color).toEqual('rgba(130, 130, 130, 0.1)');
   });
 
-  test('hint block displays after hover over Status [Offline] of your profiles on block', async ({ page }) => {
+  test('Hint block displays after hover over Status [Offline] of your profiles on block', async ({ page }) => {
     // Set a timeout to load the page
     await page.waitForTimeout(6000);
     
@@ -201,7 +201,7 @@ test('Status [Online] of your profiles on block has green background', async ({ 
   expect(color).toEqual('rgba(77, 171, 117, 0.1)');
 });
 
-test('hint block displays after hover over Status [Online] of your profiles on block', async ({ page }) => {
+test('Hint block displays after hover over Status [Online] of your profiles on block', async ({ page }) => {
   // Click on the Start Work button
   await clickOnStartWorkButton(page);
   
