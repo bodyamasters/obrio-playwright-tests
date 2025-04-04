@@ -2,9 +2,7 @@
 import { test, expect } from '@playwright/test';
 import { TIMEOUT } from 'dns';
 
-test.beforeEach(async ({ page }) => {
-  // Set timeout
-  
+test.beforeEach(async ({ page }) => {  
   // Login into account
   await loginIntoAccount(page, {timeout: 45000});
 });
