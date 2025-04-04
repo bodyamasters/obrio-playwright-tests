@@ -4,7 +4,6 @@ import { TIMEOUT } from 'dns';
 
 test.beforeEach(async ({ page }) => {
   // Set timeout
-//  test.setTimeout(45000);
   
   // Login into account
   await loginIntoAccount(page, {timeout: 45000});
@@ -117,7 +116,7 @@ test.describe('Status of your profiles on block', () => {
  
   test('Status [Offline] of your profiles on block has grey background', async ({ page }) => {
     // Set a timeout to load the page
-    await page.waitForTimeout(6000);
+    await page.waitForTimeout(7000);
     
     // Find the User Status block
     const block = page.getByLabel('Status of your profiles on').locator('div');
